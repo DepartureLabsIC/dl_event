@@ -1,12 +1,18 @@
 # Departure Labs Simple Events 
 
-This is a simple library for publishing canister events subscribers. 
+A simple and fun library for publishing canister events to subscribers! 🎉
+
+
+> Please note that our implementation is not optimized for 
+> pushing large volumes of events or retrying on failures. 
+> However, it is still a great option for canisters with a few subscribers 
+> who need to share non-critical information.
+> Got that? Okay, let's get started!
 
 
 ## Publishing Events
 
-
-First implement the SimpleEvent trait for your event
+To publish an event, first derive `CandidType`, `Serialize`, `Deserialize` traits for your event struct, and then implement `SimpleEvent` trait on it.
 
 ```rust
 #[derive(CandidType, Serialize, Deserialize)]
@@ -32,13 +38,13 @@ impl SimpleEvent for FriendMessagedEvent {
 
 ```
 
-Add a subscriber using the `add_subscriber` function
+Then, add a subscriber using the add_subscriber function:
 
 ```rust
 dl_events::add_subscriber(Principal::anonymous());
 ```
 
-finally, publish an event
+Finally, publish an event using the publish_event function:
 
 ```rust
 dl_events::publish_event(&FriendMessagedEvent {
@@ -49,7 +55,7 @@ dl_events::publish_event(&FriendMessagedEvent {
 
 ## Consuming Events
 
-add the following update of the following shape to your canister
+To consume events, add the following update method to your canister:
 
 ```rust
 
@@ -59,8 +65,7 @@ fn dl_events_simple_notify_v0(event : dl_events::Event) -> () {
 }
 ```
 
-Next, implement logic to determine type of incoming event
-
+Next, implement logic to determine the type of incoming event:
 
 ```rust
 #[update]
@@ -75,3 +80,4 @@ fn dl_events_simple_notify_v0(event : dl_events::Event) -> () {
     }
 }
 ```
+
