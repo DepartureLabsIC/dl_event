@@ -1,12 +1,12 @@
 [package]
 name = "dl_events"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 keywords = ["dfinity", "ic", "internet-computer", "canister", "cdk"]
 readme="README.md"
 authors = ["Hazel Rowell"]
 description = "A simple and fun library for publishing canister events to subscribers! 🎉"
-repository = "https://github.com/DepartureLabsIC/dl_authorize"
+repository = "https://github.com/DepartureLabsIC/dl_events"
 license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
