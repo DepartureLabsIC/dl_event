@@ -9,6 +9,7 @@ This is a simple library for publishing canister events subscribers.
 First implement the SimpleEvent trait for your event
 
 ```rust
+#[derive(CandidType, Serialize, Deserialize)]
 pub struct FriendMessagedEvent {
     message : String,
     at : u64,
