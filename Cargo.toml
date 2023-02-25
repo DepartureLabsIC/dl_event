@@ -5,7 +5,7 @@ edition = "2021"
 keywords = ["dfinity", "ic", "internet-computer", "canister", "cdk"]
 readme="README.md"
 authors = ["Hazel Rowell"]
-description = "git"
+description = "A simple and fun library for publishing canister events to subscribers! 🎉"
 repository = "https://github.com/DepartureLabsIC/dl_authorize"
 license = "MIT"
 
