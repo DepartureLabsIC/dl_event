@@ -1,0 +1,20 @@
+[package]
+name = "dl_events"
+version = "0.1.0"
+edition = "2021"
+keywords = ["dfinity", "ic", "internet-computer", "canister", "cdk"]
+readme="README.md"
+authors = ["Hazel Rowell"]
+description = "git"
+repository = "https://github.com/DepartureLabsIC/dl_authorize"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+candid = "0.7.14"
+ic-cdk = "0.5.2"
+ic-cdk-macros = "0.5.2"
+ic-stable-structures = "0.5.1"
+serde = "1.0.152"
+serde_json = "1.0.93"
